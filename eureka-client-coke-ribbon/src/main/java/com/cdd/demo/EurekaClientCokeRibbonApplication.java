@@ -15,7 +15,6 @@ public class EurekaClientCokeRibbonApplication {
 		SpringApplication.run(EurekaClientCokeRibbonApplication.class, args);
 	}
 	
-	
 	@Bean   // 向spring容器中中注册RestTemplate
 	@LoadBalanced  // 负载均衡注解
 	public RestTemplate restTemplate() {
