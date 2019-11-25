@@ -18,6 +18,7 @@ public class CokeController {
 	// 通过RestTemplate向用户微服务发送请求
 	@GetMapping("/coke/{id}")
 	public User findById(@PathVariable Long id) {
+		
 		// 方法getForObject当前请求路径参数已经换成了用户微服务的 serviceId,
 		return this.restTemplate.getForObject("http://eureka-client-user/user/" + id, User.class);
 	}
