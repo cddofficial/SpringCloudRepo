@@ -1,0 +1,30 @@
+server:
+  port: 9002
+ 
+spring:
+  application:
+    name: eureka-client-user   #应用程序名称
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: h2
+    schema: classpath:schema.sql   #一般是创建表结构的sql
+    data: classpath:data.sql   #一般是处理表数据的sql
+    
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRANCE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRANCE
+    com.cdd: DEBUG
+ 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
