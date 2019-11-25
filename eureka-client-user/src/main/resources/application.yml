@@ -1,5 +1,5 @@
 server:
-  port: 8002  #修改端口为8002
+  port: 8001  #修改端口为8001
  
 spring:
   application:
