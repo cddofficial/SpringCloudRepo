@@ -16,4 +16,10 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     prefer-ip-address: true  #显示真实ip，不是必须的
+    
 
+#显示服务器详细的健康信息
+management:
+  endpoint:
+    health:
+      show-details: always  # 是否展示健康检查详情
