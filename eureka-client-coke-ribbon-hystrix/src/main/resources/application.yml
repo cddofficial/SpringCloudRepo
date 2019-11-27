@@ -22,4 +22,8 @@ eureka:
 management:
   endpoint:
     health:
-      show-details: always  # 是否展示健康检查详情
+      show-details: always  # 是否展示健康检查详情
+  endpoints:
+    web:
+      exposure:
+        include: 'hystrix.stream'  # 暴露‘hystrix.stream’端点
