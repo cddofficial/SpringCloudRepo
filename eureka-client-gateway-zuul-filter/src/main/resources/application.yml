@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+spring:  application:    name: eureka-client-gateway-zuul
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}  #实例id
+
+#zuul:#  prefix: /api
