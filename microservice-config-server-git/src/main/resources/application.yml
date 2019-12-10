@@ -1,0 +1,7 @@
+server:
+  port: 7070
+  
+spring:  cloud:    config:      server:        git:          uri: https://github.com/cddofficial/cloud-config-git-repo  #公用仓库
+          username: xxxx
+          password: xxxx
+            
