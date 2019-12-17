@@ -1,0 +1,5 @@
+server:
+  port: 7070
+  
+spring:  cloud:    config:      server:        git:          uri: https://github.com/cddofficial/cloud-config-git-reposecurity:  basic:    enabled: true
+  user:    name:    
