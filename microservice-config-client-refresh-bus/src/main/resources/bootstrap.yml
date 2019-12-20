@@ -1,0 +1,19 @@
+server:
+  port: 7071
+  
+spring:
+  application:    name: foobar  #与远程配置文件名称有关，可与下面的profile值，拼成foobar-dev 
+  cloud:    config:      uri: http://localhost:7070
+      profile: dev
+      label: master #当config server的后端存储是git时，默认是master
+  rabbitmq:    host: localhost
+    port: 5672
+    username: guest
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 
+        - refresh    #暴露refresh端点
+        - bus-refresh  #暴露bus-refresh端点
