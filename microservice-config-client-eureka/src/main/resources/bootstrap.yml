@@ -1,0 +1,16 @@
+server:
+  port: 7071
+  
+spring:
+  application:    name: microservice-config-client-eureka
+  cloud:    config:
+      discovery:
+        enabled: true  #Flag to indicate that config server discovery is enabled (config server URL will be looked up via discovery).        service-id:  microservice-config-server-eureka
+        
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true  #显示真实ip，不是必须的
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}  #实例id，如， 实力id:端口号
